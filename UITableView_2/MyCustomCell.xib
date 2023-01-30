@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCustomCell" rowHeight="120" id="0Hq-0g-0HC" customClass="MyCustomCell" customModule="UITableView_2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Hq-0g-0HC" id="c8w-tB-TQL">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="berlin" translatesAutoresizingMaskIntoConstraints="NO" id="zv3-2H-zVi">
+                        <rect key="frame" x="10" y="10" width="150" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="7Vn-IT-VAd"/>
+                            <constraint firstAttribute="width" constant="150" id="fN8-Og-7wT"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7B-DQ-zTc">
+                        <rect key="frame" x="170" y="10" width="234" height="100"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3J-qz-GfX">
+                        <rect key="frame" x="349" y="54" width="24" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d9l-De-GFY">
+                        <rect key="frame" x="320" y="29.5" width="22" height="20"/>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                        <imageReference key="image" image="star.fill" catalog="system" symbolScale="default"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zv3-2H-zVi" secondAttribute="bottom" constant="10" id="5hl-7u-uqC"/>
+                    <constraint firstItem="C7B-DQ-zTc" firstAttribute="top" secondItem="c8w-tB-TQL" secondAttribute="top" constant="10" id="JQC-Wj-QJ3"/>
+                    <constraint firstItem="zv3-2H-zVi" firstAttribute="leading" secondItem="c8w-tB-TQL" secondAttribute="leading" constant="10" id="Nfh-UO-zOT"/>
+                    <constraint firstItem="C7B-DQ-zTc" firstAttribute="leading" secondItem="zv3-2H-zVi" secondAttribute="trailing" constant="10" id="Qot-qk-CWX"/>
+                    <constraint firstAttribute="bottom" secondItem="C7B-DQ-zTc" secondAttribute="bottom" constant="10" id="Z8x-8q-6O8"/>
+                    <constraint firstItem="zv3-2H-zVi" firstAttribute="top" secondItem="c8w-tB-TQL" secondAttribute="top" constant="10" id="ghe-6a-gEW"/>
+                    <constraint firstItem="d9l-De-GFY" firstAttribute="leading" secondItem="C7B-DQ-zTc" secondAttribute="leading" constant="150" id="hUi-n6-yjp"/>
+                    <constraint firstItem="d9l-De-GFY" firstAttribute="top" secondItem="C7B-DQ-zTc" secondAttribute="top" constant="20" id="iCX-q3-dn9"/>
+                    <constraint firstAttribute="trailing" secondItem="C7B-DQ-zTc" secondAttribute="trailing" constant="10" id="nZc-hZ-Gda"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="favourite" destination="d9l-De-GFY" id="iol-xA-WV0"/>
+                <outlet property="iconImageView" destination="zv3-2H-zVi" id="jSs-iT-BwE"/>
+                <outlet property="label" destination="C7B-DQ-zTc" id="htf-Kv-QZb"/>
+            </connections>
+            <point key="canvasLocation" x="57.971014492753625" y="-18.75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="berlin" width="1024" height="563"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

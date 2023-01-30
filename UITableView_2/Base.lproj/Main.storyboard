@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CNA-tB-12W">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cities-->
+        <scene sceneID="WW4-1I-ga3">
+            <objects>
+                <tableViewController storyboardIdentifier="myTableView" id="Hih-k5-S77" customClass="MyTableViewController" customModule="UITableView_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="98Y-Wm-rEj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="v1Q-Db-FMb">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v1Q-Db-FMb" id="vur-BZ-XG6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hih-k5-S77" id="h6Z-Jh-1Uo"/>
+                            <outlet property="delegate" destination="Hih-k5-S77" id="ej8-nk-M7Z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Cities" id="5jO-MV-HjB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rej-OS-nm6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="15"/>
+        </scene>
+        <!--My Collection View Controller-->
+        <scene sceneID="M4M-48-Hhh">
+            <objects>
+                <viewController id="CZh-We-6ZT" customClass="MyCollectionViewController" customModule="UITableView_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4IV-W7-L4g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-Eq-H96">
+                                <rect key="frame" x="155" y="75" width="104" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="hAk-Eu-qbi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q33-Hm-zqO">
+                                <rect key="frame" x="20" y="147" width="374" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WQE-Os-TwA">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier=" cell" id="VVf-Vv-upe" customClass="MyCollectionCell" customModule="UITableView_2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mIZ-kw-izJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="berlin" translatesAutoresizingMaskIntoConstraints="NO" id="kn1-Fr-dWx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="kn1-Fr-dWx" secondAttribute="trailing" id="JeC-Rb-fW4"/>
+                                                <constraint firstItem="kn1-Fr-dWx" firstAttribute="top" secondItem="mIZ-kw-izJ" secondAttribute="top" id="YYe-OB-ref"/>
+                                                <constraint firstAttribute="bottom" secondItem="kn1-Fr-dWx" secondAttribute="bottom" id="gU1-g7-obb"/>
+                                                <constraint firstItem="kn1-Fr-dWx" firstAttribute="leading" secondItem="mIZ-kw-izJ" secondAttribute="leading" id="kdl-lC-hzx"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="300" height="200"/>
+                                        <connections>
+                                            <outlet property="myCityImage" destination="kn1-Fr-dWx" id="a4i-iI-SWL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="CZh-We-6ZT" id="pTi-xk-fww"/>
+                                    <outlet property="delegate" destination="CZh-We-6ZT" id="0aJ-JJ-rZm"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P2Q-R1-9GM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tmb-Eq-H96" firstAttribute="centerX" secondItem="4IV-W7-L4g" secondAttribute="centerX" id="Bai-1D-rBC"/>
+                            <constraint firstItem="Tmb-Eq-H96" firstAttribute="top" secondItem="P2Q-R1-9GM" secondAttribute="top" constant="31" id="P3Y-5Z-7yf"/>
+                            <constraint firstItem="Tmb-Eq-H96" firstAttribute="top" secondItem="P2Q-R1-9GM" secondAttribute="top" constant="31" id="S6p-EQ-RRK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKy-Kv-umS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2823.1884057971015" y="21.428571428571427"/>
+        </scene>
+        <!--Home Page View Controller-->
+        <scene sceneID="MKr-Nc-Epu">
+            <objects>
+                <viewController id="CNA-tB-12W" customClass="HomePageViewController" customModule="UITableView_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d2u-Xh-Tt9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40u-Jg-kYp">
+                                <rect key="frame" x="144" y="437.5" width="126" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Horizontal View"/>
+                                <connections>
+                                    <action selector="onTapHorizontalViewMyCities" destination="CNA-tB-12W" eventType="touchUpInside" id="uPa-0E-lrX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bai-EW-KUq">
+                                <rect key="frame" x="153" y="487.5" width="108" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Vertical View"/>
+                                <connections>
+                                    <action selector="onTapVerticalViewMyCities" destination="CNA-tB-12W" eventType="touchUpInside" id="Wch-23-gym"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RWu-Ig-Yce"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="40u-Jg-kYp" firstAttribute="centerY" secondItem="RWu-Ig-Yce" secondAttribute="centerY" id="2Nk-xH-5P3"/>
+                            <constraint firstItem="Bai-EW-KUq" firstAttribute="centerY" secondItem="40u-Jg-kYp" secondAttribute="centerY" constant="50" id="L0t-sQ-0dF"/>
+                            <constraint firstItem="40u-Jg-kYp" firstAttribute="centerX" secondItem="RWu-Ig-Yce" secondAttribute="centerX" id="b9u-pW-cNw"/>
+                            <constraint firstItem="Bai-EW-KUq" firstAttribute="centerX" secondItem="RWu-Ig-Yce" secondAttribute="centerX" id="zPR-ZX-DDY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFm-Pp-Vq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1323" y="15"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bmo-8p-3JC">
+            <objects>
+                <navigationController storyboardIdentifier="verticalView" automaticallyAdjustsScrollViewInsets="NO" id="E7H-qK-40u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="4sG-lN-o9W">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hih-k5-S77" kind="relationship" relationship="rootViewController" id="sV5-F1-XD2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wsW-2z-mXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="berlin" width="1024" height="563"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
